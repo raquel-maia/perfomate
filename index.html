@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfoMate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+</head>
+<body>
+    <header class="content_header">
+        <h1>PerfoMate</h1>
+        <p>
+            É uma ferramenta online que permite calcular as principais métricas dos seus clientes, tais como CTR, CLIQUES, CAC, LEADS. 
+            A ferramenta é fácil de usar: basta escolher qual das calculadoras mais se aplica ao seu problema, inserir os valores nos espaços e clicar no botão "calcular" na linha correspondente.
+        </p>
+    </header >
+    <main class="content_doc">
+
+    <section class="user__form">
+        <h2>Adicione seus dados para começar:</h2>
+        <form class="user__form__data">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+        </form>
+        </section>
+        <div class="calculator">
+            <section class="calc__cac">
+                <h2 class="calc__cac__title">Calculadora de CAC</h2>
+                <p class="calc__cac__paragraph">Descubra quanto sua empresa gasta em média para conquistar um novo cliente:</p>
+                <table class="table__cac">
+                    <tr>
+                    <td>Total de investimento:</td>  
+                    <td><input type="number" id="investimento" name="Investimento" placeholder="R$" step="0.01"></td> 
+                    </tr>
+                    <tr>
+                        <td>Número de clientes conquistado:</td>
+                        <td><input type="number" id="clientes" name="clientes"></td> 
+                    </tr>
+                </table>
+                
+                <button id="enviar-cac">Calcular</button>
+                <div class="result__cac"></div>
+            </section> 
+
+            <section class="calc__ctr">
+                <h2 class="calc__ctr__title">Calculadora de CTR</h2>
+                <p class="calc__ctr__paragraph">Descubra qual a proporção de cliques por visualização que o seu anúncio recebeu:</p>
+                <table class="table__ctr">
+                    <tr>
+                    <td>Número de cliques:</td>  
+                    <td><input type="number" id="cliques" name="cliques"></td> 
+                    </tr>
+                    <tr>
+                        <td>Número de impressões adquiridos:</td>
+                        <td><input type="number" id="impressoes" name="impressoes"></td> 
+                    </tr>
+                </table>
+
+                <button id="enviar-ctr">Calcular</button>
+                <div class="result__ctr"></div>
+            </section>
+
+            <section class="calc__clicks">
+                <h2 class="calc__clicks__title">Calculadora de Cliques</h2>
+                <p class="calc__clicks__paragraph">Descubra quantos cliques você alcançar com seu investimento:</p>
+                <table class="table__clicks">
+                    <tr>
+                    <td>Total de investimento realizado:</td>  
+                    <td><input type="number" id="investimento2" name="Investimento2" placeholder="R$" step="0.01"></td> 
+                    </tr>
+                    <tr>
+                        <td>Adicione o seu cpc médios:</td>
+                        <td><input type="number" id="cpc" name="cpc" placeholder="R$" step="0.01"></td> 
+                    </tr>
+                </table>
+                
+                <button id="enviar-clicks">Calcular</button>
+                <div class="result__clicks"></div>
+            </section> 
+
+            
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
